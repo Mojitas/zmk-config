@@ -17,14 +17,30 @@
 
 		default_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   \  |
-// |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | L SHIFT | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
-//                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
+// |  ESC  |  Q  |  W  |  F   |  P   |  B   |                                          |  J   |  L    |  U    |  Y   |   Å   |   Ä  |
+// |  TAB  |  A  |  R  |  S   |  T   |  G   |                                          |  M   |  N    |  E    |  I   |   O   |   Ö  |
+// | SHIFT |  Z  |  X  |  C   |  D   |  V   | L SHIFT | L SHIFT |  | L SHIFT |   RET   |  K   |  H    |  ,    |  .   |   /   | CTRL |
+//                     | GUI  | DEL  |LOWER |  SPACE  |   ESC   |  |   RET   |  SPACE  |RAISE | TERM  | R-ALT |
 			bindings = <
-	&kp ESC   &kp Q &kp W &kp F &kp P &kp B                                                &kp J &kp L  &kp U     &kp Y   &kp COLON &kp BSLH
-	&kp TAB   &kp A &kp R &kp S &kp T &kp G                                                &kp M &kp N  &kp E     &kp I   &kp O &kp SQT
-	&kp LSHFT &kp Z &kp X &kp C &kp D &kp V &kp LSHFT &kp LSHFT        &kp LSHFT &kp RET &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
+	&kp ESC   &kp Q &kp W &kp F &kp P &kp B                                                &kp J &kp L  &kp U     &kp Y   &kp LBKT &kp SQT
+	&kp TAB   &kp A &kp R &kp S &kp T &kp G                                                &kp M &kp N  &kp E     &kp I   &kp O &kp SEMI
+	&kp LSHFT &kp Z &kp X &kp C &kp D &kp V &kp LCTRL &kp LSHFT        &kp LSHFT &kp RET &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
+	                 &kp LGUI &kp LGUI &kp LOWER &kp BSPC &kp ESC        &kp RET  &kp SPACE  &kp RAISE &kp GRAVE &kp RALT
+			>;
+
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+		};
+		
+		Lower {
+// ---------------------------------------------------------------------------------------------------------------------------------
+// |  ESC  |  CAPS  |  PG_UP  |  UP   |  PG_DN   |  B   |                              |  !   |  ?    |  (    |  )   | _  |   Ä  |
+// |  TAB  |  HOME  |  LEFT   | DOWN  |  RIGHT   |  END |                              |  @   |  *    |  [    |  ]   | -  |   Ö  |
+// | SHIFT |  Z  |  X  |  C   |  D   |  V   | L SHIFT | L SHIFT |  | L SHIFT |   RET   |  $   |  <    |  {    |  }   | >  | CTRL |
+//                     | GUI  | DEL  |LOWER |  SPACE  |   ESC   |  |   RET   |  SPACE  |RAISE | TERM  | R-ALT |
+			bindings = <
+	&kp ESC   &kp Q &kp W &kp F &kp P &kp B                                                &kp J &kp L  &kp U     &kp Y   &kp LBKT &kp SQT
+	&kp TAB   &kp A &kp R &kp S &kp T &kp G                                                &kp M &kp N  &kp E     &kp I   &kp O &kp SEMI
+	&kp LSHFT &kp Z &kp X &kp C &kp D &kp V &kp LCTRL &kp LSHFT        &kp LSHFT &kp RET &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
 	                 &kp LGUI &kp LGUI &kp LOWER &kp BSPC &kp ESC        &kp RET  &kp SPACE  &kp RAISE &kp GRAVE &kp RALT
 			>;
 
