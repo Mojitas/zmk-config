@@ -40,7 +40,7 @@
 			bindings = <
 	&trans &kp CAPS &kp PG_UP &kp UP   &kp PG_DN &trans                                       &kp EXCL &kp QMARK &kp LPAR &kp RPAR &kp UNDER &trans
 	&trans &kp HOME &kp LEFT  &kp DOWN &kp RIGHT &kp END                                      &kp AT   &kp STAR  &kp LBKT &kp RBKT &kp MINUS &trans
-	&trans &kp Z    &trans    &trans   &kp D  &kp V &kp LCTRL &kp LSHFT     &kp LSHFT &kp RET &kp DLLR &kp LT    &kp LRBC &kp RBRC &kp GT    &trans
+	&trans &kp Z    &trans    &trans   &kp D  &kp V &kp LCTRL &kp LSHFT     &kp LSHFT &kp RET &kp DLLR &kp LT    &kp LBRC &kp RBRC &kp GT    &trans
 	                     &trans    &trans   &trans &kp BSPC &kp ESC             &kp RET  &kp SPACE &trans &trans &trans
 			>;
 
