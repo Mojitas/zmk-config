@@ -13,22 +13,29 @@
 #define RAISE   3
 #define CONFIG  4
 
+
+#define SE_LBKC RA(N8)
+#define SE_RBKC RA(N9)
+#define SE_LBRC RA(N7)
+#define SE_RBRC RA(N0)
+
+
 / {
 	keymap {
 		compatible = "zmk,keymap";
 
 			Colemak {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  F  |  P   |  B   |                                  |  J   |  L  |  U    |  Y  |  Å  |   Ä  |
-// | SHIFT|  A  |  R  |  S  |  T   |  G   |                                  |  M   |  N  |  E    |  I  |  O  |   Ö  |
-// | CRTL |  Z  |  X  |  C  |  D   |  V   | TERM | DEL |     | SHIFT | L GUI |  K   |  H  |  ,    |  .  |  /  | CTRL |
-//                    |     |L ALT |LOWER | BSPC | ESC |     | RET   | SPACE |RAISE | R-ALT |     |
+// |  TAB |  Q  |  W  |  F  |  P   |  B   |                                  |  J   |  L  |  U  |  Y  |  Å  |   Ä  |
+// | SHIFT|  A  |  R  |  S  |  T   |  G   |                                  |  M   |  N  |  E  |  I  |  O  |   Ö  |
+// | CRTL |  Z  |  X  |  C  |  D   |  V   | TERM | DEL |     | SHIFT | L GUI |  K   |  H  |  ,  |  .  |  /  | CTRL |
+//                    |     |L ALT |LOWER | BSPC | ESC |     | RET   | SPACE |RAISE | R-ALT |   |
 
 			bindings = <
 	&kp TAB   &kp Q &kp W &kp F &kp P &kp B                                                &kp J &kp L  &kp U  &kp Y   &kp LBKT &kp SQT
 	&kp LSHFT &kp A &kp R &kp S &kp T &kp G                                                &kp M &kp N  &kp E  &kp I   &kp O &kp SEMI
-	&kp LCRTL &kp Z &kp X &kp C &kp D &kp V &kp GRAVE &kp LCTRL        &kp RSHFT &kp LGUI &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-	                 &trans  &kp LALT &mo LOWER &kp BSPC &kp ESC        &kp RET  &kp SPACE  &mo RAISE &kp RALT &trans
+	&kp LCRTL &kp Z &kp X &kp C &kp D &kp V &kp ESC  &kp GRAVE           &kp LGUI &kp RET &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
+	                 &trans  &kp LALT &mo LOWER &kp BSPC &kp DEL		&kp LGUI  &kp SPACE  &mo RAISE &kp RALT &trans
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -53,15 +60,15 @@
 		};
 		Lower {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |    |CAPS |PG_UP|  UP  |PG_DN |     |                                           |  !   |  ?    |  (    |  )   | _  |   |
-// |    |HOME |LEFT | DOWN |RIGHT | END |                                           |  @   |  *    |  [    |  ]   | -  |   |
-// |    |     |     |      |      |     | L SHIFT | L SHIFT |   | L SHIFT |   RET   |  $   |  <    |  {    |  }   | >  |   |
-//                     | GUI  | DEL  |LOWER |  SPACE  |   ESC   |   |   RET   |  SPACE  |RAISE | TERM  | R-ALT |
+// |    |CAPS |PG_UP|  UP  |PG_DN |     |                           |  !   |  ?  | (  |  )  | _  |   |
+// |    |HOME |LEFT | DOWN |RIGHT | END |                           |  @   |  *  | [  |  ]  | -  |   |
+// |    |     |     |      |      |     |    |    |         |   |   |  $   |  <  | {  |  }  | >  |   |
+//                         |      |     |    |    |         |   |   |CONFIG|     |    |
 
 			bindings = <
-	&trans &kp CAPS &kp PG_UP &kp UP   &kp PG_DN &trans                                 &kp EXCL   &kp QMARK &kp LPAR &kp RPAR &kp UNDER &trans
-	&trans &kp HOME &kp LEFT  &kp DOWN &kp RIGHT &kp END                                &kp AT     &kp STAR  &kp LBKT &kp RBKT &kp MINUS &trans
-	&trans &trans   &trans    &trans   &trans  &trans &trans &trans     &trans  &trans  &kp DLLR   &kp LT    &kp LBRC &kp RBRC &kp GT    &trans
+	&trans &kp CAPS &kp PG_UP &kp UP   &kp PG_DN &trans                                 &kp EXCL   &kp UNDER &kp STAR &kp LPAR &kp QMARK &trans
+	&trans &kp HOME &kp LEFT  &kp DOWN &kp RIGHT &kp END                                &kp AT     &kp PIPE &kp LBKT &kp RBKT &kp MINUS &trans
+	&trans &trans   &trans    &trans   &trans  &trans &trans &trans     &trans  &trans  &kp DLLR   &kp LT   &kp SE_LBRC &kp SE_RBRC &kp GT &trans
 	                          &trans   &trans  &trans &trans &trans     &trans  &trans  &mo CONFIG &trans    &trans
 			>;
 
