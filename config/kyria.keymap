@@ -14,11 +14,13 @@
 #define CONFIG  4
 
 
+//some swedish key codes 
 #define SE_LBKC RA(N8)
 #define SE_RBKC RA(N9)
 #define SE_LBRC RA(N7)
 #define SE_RBRC RA(N0)
-
+#define SE_LPAR SH(N8)
+#define SE_RPAR SH(N9)
 
 / {
 	keymap {
