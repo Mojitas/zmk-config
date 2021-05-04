@@ -14,13 +14,19 @@
 #define CONFIG  4
 
 
-//some swedish key codes 
+//some swedish key codes
+#define SE_LT 60
+#define SE_GT 62
+#define SE_PIPE RA(LT)
+#define SE_AP LS(N6) 
 #define SE_LBKC RA(N8)
 #define SE_RBKC RA(N9)
 #define SE_LBRC RA(N7)
 #define SE_RBRC RA(N0)
-#define SE_LPAR SH(N8)
-#define SE_RPAR SH(N9)
+#define SE_LPAR LS(N8)
+#define SE_RPAR LS(N9)
+#define SE_FLSH LS(N7)
+#define SE_BLSH RA(PLUS)
 
 / {
 	keymap {
@@ -36,8 +42,8 @@
 			bindings = <
 	&kp TAB   &kp Q &kp W &kp F &kp P &kp B                                                &kp J &kp L  &kp U  &kp Y   &kp LBKT &kp SQT
 	&kp LSHFT &kp A &kp R &kp S &kp T &kp G                                                &kp M &kp N  &kp E  &kp I   &kp O &kp SEMI
-	&kp LCTRL &kp Z &kp X &kp C &kp D &kp V &kp GRAVE &kp LCTRL        &kp RSHFT &kp LGUI &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-	                 &none &kp LALT &mo LOWER &kp BSPC &kp ESC        &kp RET  &kp SPACE  &mo RAISE &kp RALT &none
+	&kp LCTRL &kp Z &kp X &kp C &kp D &kp V &kp ESC &kp GRAVE         &kp LGUI &kp RET  &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &sk SHIFT
+	                 &none &kp LALT &mo LOWER &kp BSPC &kp DEL        &kp SHIFT  &kp SPACE  &mo RAISE &kp RALT &none
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -62,9 +68,9 @@
 		};
 		Lower {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |    |CAPS |PG_UP|  UP  |PG_DN |     |                           |  !   |  ?  | (  |  )  | _  |   |
-// |    |HOME |LEFT | DOWN |RIGHT | END |                           |  @   |  *  | [  |  ]  | -  |   |
-// |    |     |     |      |      |     |    |    |         |   |   |  $   |  <  | {  |  }  | >  |   |
+// |    |CAPS |PG_UP|  UP  |PG_DN |     |                           |SE_BLSH|SE_FLSH| (  |  )  | _  |   |
+// |    |HOME |LEFT | DOWN |RIGHT | END |                           |SE_PIPE|  *  | [  |  ]  | -  |   |
+// |    |     |     |      |      |     |    |    |         |   |   |SE_AP|  <  | {  |  }  | >  |   |
 //                         |      |     |    |    |         |   |   |CONFIG|     |    |
 
 			bindings = <
