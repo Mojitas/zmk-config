@@ -42,7 +42,7 @@
 			bindings = <
 	&kp TAB   &kp Q &kp W &kp F &kp P &kp B                                                &kp J &kp L  &kp U  &kp Y   &kp LBKT &kp SQT
 	&kp LSHFT &kp A &kp R &kp S &kp T &kp G                                                &kp M &kp N  &kp E  &kp I   &kp O &kp SEMI
-	&kp LCTRL &kp Z &kp X &kp C &kp D &kp V &kp ESC &kp GRAVE         &kp LGUI &kp RET  &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &sk SHIFT
+	&kp LCTRL &kp Z &kp X &kp C &kp D &kp V &kp ESC &kp GRAVE         &kp LGUI &kp RET  &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &sk LSHFT
 	                 &none &kp LALT &mo LOWER &kp BSPC &kp DEL        &kp SHIFT  &kp SPACE  &mo RAISE &kp RALT &none
 			>;
 
@@ -68,16 +68,16 @@
 		};
 		Lower {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |    |CAPS |PG_UP|  UP  |PG_DN |     |                           |SE_BLSH|SE_FLSH| (  |  )  | _  |   |
-// |    |HOME |LEFT | DOWN |RIGHT | END |                           |SE_PIPE|  *  | [  |  ]  | -  |   |
-// |    |     |     |      |      |     |    |    |         |   |   |SE_AP|  <  | {  |  }  | >  |   |
+// |    |CAPS |PG_UP|  UP  |PG_DN |     |                           |  \  |  /  | (  |  )  | _  |   |
+// |    |HOME |LEFT | DOWN |RIGHT | END |                           |  |  |  *  | [  |  ]  | -  |   |
+// |    |     |     |      |      |     |    |    |         |   |   |  &  |  <  | {  |  }  | >  |   |
 //                         |      |     |    |    |         |   |   |CONFIG|     |    |
 
 			bindings = <
-	&trans &kp CAPS &kp PG_UP &kp UP   &kp PG_DN &trans                                 &kp EXCL   &kp UNDER &kp STAR &kp LPAR &kp QMARK &trans
-	&trans &kp HOME &kp LEFT  &kp DOWN &kp RIGHT &kp END                                &kp AT     &kp PIPE &kp LBKT &kp RBKT &kp MINUS &trans
-	&trans &trans   &trans    &trans   &trans  &trans &trans &trans     &trans  &trans  &kp DLLR   &kp LT   &kp SE_LBRC &kp SE_RBRC &kp GT &trans
-	                          &trans   &trans  &trans &trans &trans     &trans  &trans  &mo CONFIG &trans    &trans
+	&trans &kp CAPS &kp PG_UP &kp UP   &kp PG_DN &trans                                 &kp SE_BLSH &kp UNDER &kp STAR &kp LPAR &kp QMARK &trans
+	&trans &kp HOME &kp LEFT  &kp DOWN &kp RIGHT &kp END                                &kp SE_PIPE &kp PIPE &kp LBKT &kp RBKT &kp MINUS &trans
+	&trans &trans   &trans    &trans   &trans  &trans &trans &trans     &trans  &trans  &kp SE_AP   &kp SE_LT &kp SE_LBRC &kp SE_RBRC &kp SE_GT &trans
+	                          &trans   &trans  &trans &trans &trans     &trans  &trans  &mo CONFIG  &trans    &trans
 			>;
 
 		};
