@@ -6,6 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include "swedish_keys.h"
 
 #define COLEMAK 0
 #define QWERTY  1
@@ -14,19 +15,6 @@
 #define CONFIG  4
 
 
-//some swedish key codes
-#define SE_LT NON_US_BSLH
-#define SE_GT LS(SE_LT)
-#define SE_PIPE RA(SE_LT)
-#define SE_AP LS(N6) 
-#define SE_LBKT RA(N8)
-#define SE_RBKT RA(N9)
-#define SE_LBRC RA(N7)
-#define SE_RBRC RA(N0)
-#define SE_LPAR LS(N8)
-#define SE_RPAR LS(N9)
-#define SE_FLSH LS(N7)
-#define SE_BLSH RA(MINUS)
 
 / {
 	keymap {
