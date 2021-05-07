@@ -6,7 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include "swedish_keys.h"
+#include "swedish_keys.dtsi"
 
 #define COLEMAK 0
 #define QWERTY  1
