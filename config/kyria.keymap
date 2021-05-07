@@ -36,8 +36,8 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  F  |  P   |  B   |                                  |  J   |  L  |  U  |  Y  |  Å  |   Ä  |
 // | SHIFT|  A  |  R  |  S  |  T   |  G   |                                  |  M   |  N  |  E  |  I  |  O  |   Ö  |
-// | CRTL |  Z  |  X  |  C  |  D   |  V   | TERM | DEL |     | SHIFT | L GUI |  K   |  H  |  ,  |  .  |  /  | CTRL |
-//                    |     |L ALT |LOWER | BSPC | ESC |     | RET   | SPACE |RAISE | R-ALT |   |
+// | CRTL |  Z  |  X  |  C  |  D   |  V   | ESC  |TERM |     | L GUI | RET |  K   |  H  |  ,  |  .  |  /  | CTRL |
+//                    |     |L ALT |LOWER | BSPC | DEL |     | SHIFT |SPACE |RAISE | R-ALT |   |
 
 			bindings = <
 	&kp TAB   &kp Q &kp W &kp F &kp P &kp B                                                &kp J &kp L  &kp U  &kp Y   &kp LBKT &kp SQT
@@ -54,14 +54,14 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   Å  |
 // |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   Ö   |   Ä  |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | L SHIFT |   RET   |  N   |  M    |  ,    |  .   |   /   | CTRL |
-//                     | GUI  | DEL  |LOWER |  SPACE  |   ESC   |  |   RET   |  SPACE  |RAISE | TERM  | R-ALT |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   | ESC | TERM |            | L GUI |  RET   |  N   |  M    |  ,    |  .   |   /   | CTRL |
+//                     | GUI  | DEL  |LOWER | BSPC | ESC |     | SHIFT | SPACE |RAISE | TERM  | R-ALT |
 
 			bindings = <
 	&kp ESC   &kp Q &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I   &kp O   &kp P &kp LBKT
 	&kp TAB   &kp A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K   &kp L   &kp SEMI &kp SQT
-	&kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp LCTRL &kp LSHFT        &kp LSHFT &kp RET &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-	                 &kp LGUI &kp LGUI &mo LOWER &kp BSPC &kp ESC        &kp RET  &kp SPACE  &mo RAISE &kp GRAVE &kp RALT
+	&kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp ESC &kp GRAVE        &kp LGUI &kp RET &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &sk LSHFT
+	                 &kp LGUI &kp LGUI &mo LOWER &kp BSPC &kp ESC        &kp LSHFT  &kp SPACE  &mo RAISE &kp GRAVE &kp RALT
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -74,8 +74,8 @@
 //                         |      |     |    |    |         |   |   |CONFIG|     |    |
 
 			bindings = <
-	&trans &kp CAPS &kp PG_UP &kp UP   &kp PG_DN &trans                                 &kp SE_BLSH &kp UNDER &kp STAR &kp LPAR &kp QMARK &trans
-	&trans &kp HOME &kp LEFT  &kp DOWN &kp RIGHT &kp END                                &kp SE_PIPE &kp PIPE &kp LBKT &kp RBKT &kp MINUS &trans
+	&trans &kp CAPS &kp PG_UP &kp UP   &kp PG_DN &trans                                 &kp SE_BLSH &kp UNDER &kp SE_LPAR &kp SE_RPAR &kp QMARK &trans
+	&trans &kp HOME &kp LEFT  &kp DOWN &kp RIGHT &kp END                                &kp SE_PIPE &kp PIPE  &kp SE_LBKT &kp SE_RBKT &kp MINUS &trans
 	&trans &trans   &trans    &trans   &trans  &trans &trans &trans     &trans  &trans  &kp SE_AP   &kp SE_LT &kp SE_LBRC &kp SE_RBRC &kp SE_GT &trans
 	                          &trans   &trans  &trans &trans &trans     &trans  &trans  &mo CONFIG  &trans    &trans
 			>;
