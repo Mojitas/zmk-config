@@ -15,9 +15,9 @@
 
 
 //some swedish key codes
-#define SE_LT 60
-#define SE_GT 62
-#define SE_PIPE RA(LT)
+#define SE_LT NON_US_BLSH
+#define SE_GT LS(SE_LT)
+#define SE_PIPE RA(SE_LT)
 #define SE_AP LS(N6) 
 #define SE_LBKT RA(N8)
 #define SE_RBKT RA(N9)
@@ -26,7 +26,7 @@
 #define SE_LPAR LS(N8)
 #define SE_RPAR LS(N9)
 #define SE_FLSH LS(N7)
-#define SE_BLSH RA(PLUS)
+#define SE_BLSH RA(MINUS)
 
 / {
 	keymap {
@@ -74,7 +74,7 @@
 //                         |      |     |    |    |         |   |   |CONFIG|     |    |
 
 			bindings = <
-	&trans &kp CAPS &kp PG_UP &kp UP   &kp PG_DN &trans                                 &kp SE_BLSH &kp UNDER &kp SE_LPAR &kp SE_RPAR &kp QMARK &trans
+	&trans &kp CAPS &kp PG_UP &kp UP   &kp PG_DN &trans                                 &kp SE_BLSH &kp SE_FLSH &kp SE_LPAR &kp SE_RPAR &kp QMARK &trans
 	&trans &kp HOME &kp LEFT  &kp DOWN &kp RIGHT &kp END                                &kp SE_PIPE &kp PIPE  &kp SE_LBKT &kp SE_RBKT &kp MINUS &trans
 	&trans &trans   &trans    &trans   &trans  &trans &trans &trans     &trans  &trans  &kp SE_AP   &kp SE_LT &kp SE_LBRC &kp SE_RBRC &kp SE_GT &trans
 	                          &trans   &trans  &trans &trans &trans     &trans  &trans  &mo CONFIG  &trans    &trans
