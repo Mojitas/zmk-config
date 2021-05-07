@@ -36,7 +36,7 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  F  |  P   |  B   |                                  |  J   |  L  |  U  |  Y  |  Å  |   Ä  |
 // | SHIFT|  A  |  R  |  S  |  T   |  G   |                                  |  M   |  N  |  E  |  I  |  O  |   Ö  |
-// | CRTL |  Z  |  X  |  C  |  D   |  V   | ESC  |TERM |     | L GUI | RET |  K   |  H  |  ,  |  .  |  /  | CTRL |
+// | CRTL |  Z  |  X  |  C  |  D   |  V   | ESC  |TERM |     | L GUI | RET |  K   |  H  |  ,  |  .  |  -  | sk SHFT |
 //                    |     |L ALT |LOWER | BSPC | DEL |     | SHIFT |SPACE |RAISE | R-ALT |   |
 
 			bindings = <
@@ -54,7 +54,7 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   Å  |
 // |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   Ö   |   Ä  |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   | ESC | TERM |            | L GUI |  RET   |  N   |  M    |  ,    |  .   |   /   | CTRL |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   | ESC | TERM |            | L GUI |  RET   |  N   |  M    |  ,    |  .   |   -   | sk SHFT |
 //                     | GUI  | DEL  |LOWER | BSPC | ESC |     | SHIFT | SPACE |RAISE | TERM  | R-ALT |
 
 			bindings = <
