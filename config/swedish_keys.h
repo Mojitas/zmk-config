@@ -30,7 +30,6 @@
 #define SE_ACNT  EQUAL           // ´
 #define SE_CARET RBRC            // ^
 #define SE_EQUAL LS(N0)          // =
-
-#define SE_AO LBKT              // Å
-#define SE_AE SQT               // Ä
-#define SE_OE SEMI              // Ö
+#define SE_AO LBKT               // Å
+#define SE_AE SQT                // Ä
+#define SE_OE SEMI               // Ö
