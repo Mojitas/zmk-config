@@ -21,4 +21,4 @@
 #define SE_AT RA(N2)        // @
 #define SE_EURO RA(N5)      // €
 #define SE_DQT  LS(N2)      // "
-#define SE_QT
+#define SE_QT   BSLH
