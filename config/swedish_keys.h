@@ -4,6 +4,7 @@
 #pragma once
 
 #include <dt-bindings/zmk/keys.h>
+
 //some swedish key codes
 
 #define SE_LT    NON_US_BSLH     // <
@@ -22,7 +23,7 @@
 #define SE_DLLR  RA(N4)          // $
 #define SE_EURO  RA(N5)          // €
 #define SE_DQT   LS(N2)          // "
-#define SE_SQT    BSLH            // '   
+#define SE_SQT   BSLH            // '   
 #define SE_TILDE RA(RBRC)        // ~
 #define SE_STAR  PIPE            // *
 #define SE_MU    RA(M)           // µ
