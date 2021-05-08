@@ -1,4 +1,5 @@
 
+#include <dt-bindings/zmk/keys.h>
 //some swedish key codes
 
 #define SE_LT   NON_US_BSLH     // <
@@ -17,3 +18,4 @@
 #define SE_EURO RA(N5)          // €
 #define SE_DQT  LS(N2)          // "
 #define SE_QT   BSLH            // '   
+#define SE_TILD RA(RBRC)        // ~
