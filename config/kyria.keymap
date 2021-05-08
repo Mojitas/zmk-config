@@ -8,11 +8,23 @@
 #include <dt-bindings/zmk/keys.h>
 #include "swedish_keys.h"
 
+&mt {
+    tapping-term-ms = <200>;
+};
+
+/ {
+    keymap {
+        ...
+    }
+}
+
+
+
 #define COLEMAK 0
 #define QWERTY  1
 #define LOWER   2
 #define RAISE   3
-#define CONFIG  4
+#define CONFIG  4 
 
 
 
@@ -24,14 +36,14 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  F  |  P   |  B   |                                  |  J   |  L  |  U  |  Y  |  Å  |   Ä  |
 // | SHIFT|  A  |  R  |  S  |  T   |  G   |                                  |  M   |  N  |  E  |  I  |  O  |   Ö  |
-// | CRTL |  Z  |  X  |  C  |  D   |  V   | ESC  |TERM |     | L GUI | RET |  K   |  H  |  ,  |  .  |  -  | sk SHFT |
-//                    |     |L ALT |LOWER | BSPC | DEL |     | SHIFT |SPACE |RAISE | R-ALT |   |
+// | CRTL |  Z  |  X  |  C  |  D   |  V   | ESC  |     |     | L GUI | RET   |  K   |  H  |  ,  |  .  |  -  | TERM |
+//                    |     |L ALT |LOWER | BSPC | DEL |     | SHIFT |SPACE |RAISE |    |    |
 
 			bindings = <
-	&kp TAB   &kp Q &kp W &kp F &kp P &kp B                                                &kp J &kp L  &kp U  &kp Y   &kp LBKT &kp SQT
-	&kp LSHFT &kp A &kp R &kp S &kp T &kp G                                                &kp M &kp N  &kp E  &kp I   &kp O &kp SEMI
-	&kp LCTRL &kp Z &kp X &kp C &kp D &kp V &kp ESC &kp GRAVE         &kp LGUI &kp RET  &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &sk LSHFT
-	                 &none &kp LALT &mo LOWER &kp BSPC &kp DEL        &kp LSHFT  &kp SPACE  &mo RAISE &kp RALT &none
+	&kp TAB   &kp Q &kp W &kp F &kp P &kp B                                                &kp J &kp L  &kp U  &kp Y   &kp SE_AO &kp SE_AE
+	&sk LSHFT &kp A &kp R &kp S &kp T &kp G                                                &kp M &kp N  &kp E  &kp I   &kp O &kp SE_OE
+	&kp LCTRL &kp Z &kp X &kp C &kp D &kp V &kp ESC &none             &kp LGUI &kp RET  &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp GRAVE
+	                 &none &kp LALT &mo LOWER &mt LOWER BSPC &kp DEL        &kp LSHFT  &mt RAISE SPACE  &mo RAISE &none &none
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -40,16 +52,16 @@
 
 			Qwerty{
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   Å  |
-// |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   Ö   |   Ä  |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   | ESC | TERM |            | L GUI |  RET   |  N   |  M    |  ,    |  .   |   -   | sk SHFT |
-//                     | GUI  | DEL  |LOWER | BSPC | ESC |     | SHIFT | SPACE |RAISE | TERM  | R-ALT |
+// |  TAB  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   Å  |
+// | SHIFT |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   Ö   |   Ä  |
+// | CTRL  |  Z  |  X  |  C   |  V   |  B   | ESC  |     |            | L GUI |  RET   |  N   |  M    |  ,    |  .   |   -   | TERM |
+//                     | GUI  | DEL  |LOWER | BSPC | DEL |            | SHIFT | SPACE |RAISE |    |    |
 
 			bindings = <
-	&kp ESC   &kp Q &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I   &kp O   &kp P &kp LBKT
-	&kp TAB   &kp A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K   &kp L   &kp SEMI &kp SQT
-	&kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp ESC &kp GRAVE        &kp LGUI &kp RET &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp LSHFT
-	                 &kp LGUI &kp LGUI &mo LOWER &kp BSPC &kp ESC        &sk LSHFT  &kp SPACE  &mo RAISE &kp GRAVE &kp RALT
+	&kp TAB   &kp Q &kp W  &kp E  &kp R   &kp T                                                 &kp Y &kp U  &kp I     &kp O   &kp P     &kp SE_AO
+	&kp LSHFT &kp A &kp S  &kp D  &kp F   &kp G                                                 &kp H &kp J  &kp K     &kp L   &kp SE_OE &kp SE_AE
+	&kp LCTRL &kp Z &kp X  &kp C  &kp V   &kp B  &kp ESC  &none                &kp LGUI &kp RET &kp N &kp M  &kp COMMA &kp DOT &kp FSLH  &kp GRAVE
+	                       &kp LGUI &kp LGUI &mo LOWER &mt LOWER BSPC &kp DEL        &sk LSHFT  &mt RAISE SPACE  &mo RAISE &none &none
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -57,31 +69,31 @@
 		Lower {
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |    |CAPS |PG_UP|  UP  |PG_DN |     |                           |  \  |  /  | (  |  )  | ?  |   |
-// |    |HOME |LEFT | DOWN |RIGHT | END |                           |  |  |  *  | [  |  ]  | -  |   |
-// |    |     |     |      |      |     |    |    |         |   |   |  &  |  <  | {  |  }  | >  |   |
+// |    |HOME |LEFT | DOWN |RIGHT | END |                           |  |  |  <  | [  |  ]  | >  |   |
+// |    |     |     |      |      |     |    |    |         |   |   |  =  |  *  | {  |  }  | &  |   |
 //                         |      |     |    |    |         |   |   |CONFIG|     |    |
 
 			bindings = <
-	&trans &kp CAPS &kp PG_UP &kp UP   &kp PG_DN &trans                                 &kp SE_BLSH &kp SE_FLSH &kp SE_LPAR &kp SE_RPAR &kp QMARK &trans
-	&trans &kp HOME &kp LEFT  &kp DOWN &kp RIGHT &kp END                                &kp SE_PIPE &kp PIPE  &kp SE_LBKT &kp SE_RBKT &kp MINUS &trans
-	&trans &trans   &trans    &trans   &trans  &trans &trans &trans     &trans  &trans  &kp SE_AP   &kp SE_LT &kp SE_LBRC &kp SE_RBRC &kp SE_GT &trans
-	                          &trans   &trans  &trans &trans &trans     &trans  &trans  &mo CONFIG  &trans    &trans
+	&kp C_NEXT  &kp CAPS &kp PG_UP &kp UP   &kp PG_DN &trans                                   &kp SE_BLSH  &kp SE_FLSH &kp SE_LPAR &kp SE_RPAR &kp QMARK   &kp C_VOL_UP
+	&kp C_PP    &kp HOME &kp LEFT  &kp DOWN &kp RIGHT &kp END                                  &kp SE_PIPE  &kp SE_LT   &kp SE_LBKT &kp SE_RBKT &kp SE_GT   &kp C_MUTE              
+	&kp C_PREV  &trans   &trans    &trans   &trans    &trans &trans &trans     &trans  &trans  &kp SE_EQUAL &kp SE_STAR &kp SE_LBRC &kp SE_RBRC &kp SE_AMPS &kp C_VOL_DN
+	                                &trans   &trans    &trans &trans &trans     &trans  &trans  &mo CONFIG   &trans      &trans
 			>;
 
 		};
 		
 		Raise {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |    |  !  |  @  |  #  |  "  |  %   |                            |  ;  |  7  |  8  |  9  | +  |   |
-// |    |  \  |  /  |  €  |  &  |  |   |                            |  ,  |  4  |  5  |  6  | -  |   |
-// |    |     |  ¤  |  +  |  ^  |  ~   |    |    |        |    |    |  .  |  1  |  2  |  3  | 0  |   |
+// |    |  !  |  @  |  #  |  $  |  %   |                            |  ;  |  7  |  8  |  9  | +  |   |
+// |    |  "  |  '  |  ^  |  ´  |  ~   |                            |  ,  |  4  |  5  |  6  | -  |   |
+// |    |     |     |     |     |      |    |    |        |    |    |  .  |  1  |  2  |  3  | 0  |   |
 //                  |     |     |CONFIG|    |    |        |    |    |     |     |     |
 
 			bindings = <
-   &trans  &kp EXCL  &kp AT &kp HASH &kp DQT &kp PRCNT                                   &kp SEMI  &kp N7  &kp N8  &kp N9  &kp PLUS  &trans
-   &trans  &kp BSLH &kp FSLH  &kp SE_EURO &kp AMPS &kp SE_PIPE                                &kp COMMA &kp N4  &kp N5  &kp N6  &kp MINUS &trans
-   &trans  &trans  &trans  &kp PLUS &kp CARET &kp TILDE &trans &trans       &trans &trans &kp DOT   &kp N1  &kp N2  &kp N3  &kp N0    &trans
-	                              &trans &trans &mo CONFIG &trans       &trans &trans &trans &trans &trans &trans
+   &trans        &kp EXCL  &kp SE_AT &kp HASH &kp SE_DLLR &kp PRCNT                             &kp SEMI  &kp N7  &kp N8  &kp N9  &kp PLUS  &trans
+   &kp C_BRI_UP  &kp SE_DQT &kp SE_SQT  &SE_CAR &kp SE_ACNT &kp SE_TILD                         &kp COMMA &kp N4  &kp N5  &kp N6  &kp MINUS &kp C_SCROLL_UP
+   &kp C_BRI_DN  &trans  &trans  &kp PLUS &kp CARET &kp TILDE &trans &trans       &trans &trans &kp DOT   &kp N1  &kp N2  &kp N3  &kp N0    &kp C_SCROLL_DOWN
+	                                  &trans &trans &mo CONFIG &trans       &trans &trans &trans &trans &trans &trans
 			>;
 
 		};
