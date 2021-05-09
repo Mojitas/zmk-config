@@ -36,7 +36,7 @@
 	&kp TAB   &kp Q &kp W &kp F &kp P &kp B                                                &kp J &kp L  &kp U  &kp Y   &kp SE_AO &kp SE_AE
 	&sk LSHFT &kp A &kp R &kp S &kp T &kp G                                                &kp M &kp N  &kp E  &kp I   &kp O &kp SE_OE
 	&kp LCTRL &kp Z &kp X &kp C &kp D &kp V &kp ESC &none             &kp LGUI &kp RET  &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp GRAVE
-	                 &none &kp LALT &mo LOWER &mt LOWER BSPC &kp DEL        &kp LSHFT  &mt RAISE SPACE  &mo RAISE &none &none
+	                 &none &kp LALT &mo LOWER &lt LOWER BSPC &kp DEL        &kp LSHFT  &lt RAISE SPACE  &mo RAISE &none &none
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -70,7 +70,7 @@
 	&kp C_NEXT  &kp CAPS &kp PG_UP &kp UP   &kp PG_DN &trans                                   &kp SE_BLSH  &kp SE_FLSH &kp SE_LPAR &kp SE_RPAR &kp QMARK   &kp C_VOL_UP
 	&kp C_PP    &kp HOME &kp LEFT  &kp DOWN &kp RIGHT &kp END                                  &kp SE_PIPE  &kp SE_LT   &kp SE_LBKT &kp SE_RBKT &kp SE_GT   &kp C_MUTE              
 	&kp C_PREV  &trans   &trans    &trans   &trans    &trans &trans &trans     &trans  &trans  &kp SE_EQUAL &kp SE_STAR &kp SE_LBRC &kp SE_RBRC &kp SE_AMPS &kp C_VOL_DN
-	                                &trans   &trans    &trans &trans &trans     &trans  &trans  &mo CONFIG   &trans      &trans
+	                                &trans   &trans    &trans &trans &trans     &trans  &trans  &mo CONFIG   &trans     &trans
 			>;
 
 		};
@@ -83,8 +83,8 @@
 //                  |     |     |CONFIG|    |    |        |    |    |     |     |     |
 
 			bindings = <
-   &trans        &kp EXCL  &kp RA(N2) &kp HASH &kp SE_DLLR &kp PRCNT                      &kp SEMI  &kp N7  &kp N8  &kp N9  &kp PLUS  &kp C_AC_SCROLL_UP
-   &kp C_BRI_UP  &kp SE_DQT &kp SE_SQT  &kp SE_CARET &kp SE_ACNT &kp SE_TILDE                &kp COMMA &kp N4  &kp N5  &kp N6  &kp MINUS &kp C_AC_SCROLL_DOWN
+   &trans        &kp EXCL  &kp RA(N2) &kp HASH &kp SE_DLLR &kp PRCNT                      &kp SEMI  &kp N7  &kp N8  &kp N9  &kp PLUS  &kp K_SCROLL_UP
+   &kp C_BRI_UP  &kp SE_DQT &kp SE_SQT  &kp SE_CARET &kp SE_ACNT &kp SE_TILDE             &kp COMMA &kp N4  &kp N5  &kp N6  &kp MINUS &kp K_SCROLL_DOWN
    &kp C_BRI_DN  &trans  &trans  &trans &trans &trans &trans &trans         &trans &trans &kp DOT   &kp N1  &kp N2  &kp N3  &kp N0    &trans	
 	                                  &trans &trans &mo CONFIG &trans       &trans &trans &trans &trans &trans &trans
 			>;
