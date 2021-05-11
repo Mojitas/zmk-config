@@ -24,12 +24,13 @@
 #define SE_EURO  RA(N5)          // €
 #define SE_DQT   LS(N2)          // "
 #define SE_SQT   BSLH            // '   
-#define SE_TILDE RA(RBKT)            // ~
+#define SE_TILDE RA(RBKT)        // ~
 #define SE_STAR  PIPE            // *
 #define SE_MU    RA(M)           // µ
 #define SE_ACNT  EQUAL           // ´
 #define SE_CARET RBRC            // ^
 #define SE_EQUAL LS(N0)          // =
+#define SE_SEMI LS(COMMA)        // ;
 #define SE_AT    RA(N2)          // @
 #define SE_QM    LS(PLUS)        // ?
 #define SE_AO    LBKT            // Å
