@@ -67,9 +67,9 @@
 //                         |      |     |    |    |         |   |   |CONFIG|     |    |
 
 			bindings = <
-	&kp C_NEXT  &kp CAPS &kp PG_UP &kp UP   &kp PG_DN &trans                                   &kp SE_BLSH  &kp SE_FLSH &kp SE_LPAR &kp SE_RPAR &kp QMARK   &kp C_VOL_UP
-	&kp C_PP    &kp HOME &kp LEFT  &kp DOWN &kp RIGHT &kp END                                  &kp SE_PIPE  &kp SE_LT   &kp SE_LBKT &kp SE_RBKT &kp SE_GT   &kp C_MUTE              
-	&kp C_PREV  &trans   &trans    &trans   &trans    &trans &trans &trans     &trans  &trans  &kp SE_EQUAL &kp SE_STAR &kp SE_LBRC &kp SE_RBRC &kp SE_AMPS &kp C_VOL_DN
+	&kp C_NEXT  &kp CAPS &kp PG_UP &kp UP   &kp PG_DN &trans                                   &kp SE_BLSH  &kp SE_FLSH &kp SE_LPAR &kp SE_RPAR &kp SE_QMARK &kp C_VOL_UP
+	&kp C_PP    &kp HOME &kp LEFT  &kp DOWN &kp RIGHT &kp END                                  &kp SE_PIPE  &kp SE_LT   &kp SE_LBKT &kp SE_RBKT &kp SE_GT    &kp C_MUTE              
+	&kp C_PREV  &trans   &trans    &trans   &trans    &trans &trans &trans     &trans  &trans  &kp SE_EQUAL &kp SE_STAR &kp SE_LBRC &kp SE_RBRC &kp SE_AMPS  &kp C_VOL_DN
 	                                &trans   &trans    &trans &trans &trans     &trans  &trans  &mo CONFIG   &trans     &trans
 			>;
 

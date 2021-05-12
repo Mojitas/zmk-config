@@ -32,7 +32,7 @@
 #define SE_EQUAL    LS(N0)          // =
 #define SE_SEMI     LS(COMMA)        // ;
 #define SE_AT       RA(N2)          // @
-#define SE_QMARK    LS(PLUS)        // ?
+#define SE_QMARK    LS(MINUS)       // ?
 #define SE_AO       LBKT            // Å
 #define SE_AE       SQT             // Ä
 #define SE_OE       SEMI            // Ö
