@@ -12,6 +12,12 @@
     tapping-term-ms = <200>;
 };
 
+&sk {
+    bool quick_release = 1;
+};
+
+}
+
 
 #define COLEMAK 0
 #define QWERTY  1
@@ -34,7 +40,7 @@
 
 			bindings = <
 	&kp TAB   &kp Q &kp W &kp F &kp P &kp B                                                &kp J &kp L  &kp U  &kp Y   &kp SE_AO &kp SE_AE
-	&sl LS(0) &kp A &kp R &kp S &kp T &kp G                                                &kp M &kp N  &kp E  &kp I   &kp O &kp SE_OE
+	&sk LSHFT &kp A &kp R &kp S &kp T &kp G                                                &kp M &kp N  &kp E  &kp I   &kp O &kp SE_OE
 	&kp LCTRL &kp Z &kp X &kp C &kp D &kp V &kp ESC &none             &kp LGUI &kp RET  &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp GRAVE
 	                 &none &kp LALT &lt LOWER BSPC &kp BSPC &kp DEL        &kp LSHFT  &kp SPACE &lt RAISE SPACE &none &none
 			>;
