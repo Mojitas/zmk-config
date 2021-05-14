@@ -13,7 +13,7 @@
 };
 
 &sk {
-    bool quick-release = 1;
+    quick-release = true;
 };
 
 }
