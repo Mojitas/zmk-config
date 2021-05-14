@@ -8,17 +8,12 @@
 #include <dt-bindings/zmk/keys.h>
 #include "swedish_keys.h"
 
-&mt {
-    tapping-term-ms = <200>;
-};
 
 
-// release directly after next key is pressed
 &sk {
     quick-release;
 };
 
-}
 
 
 #define COLEMAK 0
