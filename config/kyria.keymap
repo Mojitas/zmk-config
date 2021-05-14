@@ -12,8 +12,10 @@
     tapping-term-ms = <200>;
 };
 
+
+// release directly after next key is pressed
 &sk {
-    quick-release = true;
+    quick-release;
 };
 
 }
