@@ -8,14 +8,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include "swedish_keys.h"
 
-
-
-&sk {
-    quick-release;
-};
-
-
-
 #define COLEMAK 0
 #define QWERTY  1
 #define LOWER   2
@@ -23,6 +15,9 @@
 #define CONFIG  4 
 
 
+&sk { // release sticky key directly after next press
+    quick-release;
+};
 
 / {
 	keymap {
@@ -80,15 +75,15 @@
   		
 		Raise {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |    |  !  |  @  |  #  |  $  |  %   |                            |  ;  |  7  |  8  |  9  | +  |   |
-// |    |  "  |  '  |  ^  |  ´  |  ~   |                            |  ,  |  4  |  5  |  6  | -  |   |
-// |    |     |     |     |     |      |    |    |        |    |    |  .  |  1  |  2  |  3  | 0  |   |
+// |    |  !  |  @  |  #  |  $  |  %   |                            |  :  |  7  |  8  |  9  | +  |   |
+// |    |  "  |  '  |  ^  |  ´  |  ~   |                            |  ;  |  4  |  5  |  6  | -  |   |
+// |    |     |     |     |     |      |    |    |        |    |    |  =  |  1  |  2  |  3  | 0  |   |
 //                  |     |     |CONFIG|    |    |        |    |    |     |     |     |
 
 			bindings = <
    &trans        &kp EXCL  &kp SE_AT &kp HASH &kp SE_DLLR &kp PRCNT                      &kp SE_SEMI  &kp N7  &kp N8  &kp N9  &kp PLUS  &kp K_SCROLL_UP
    &kp C_BRI_UP  &kp SE_DQT &kp SE_SQT  &kp SE_CARET &kp SE_ACNT &kp SE_TILDE             &kp COMMA &kp N4  &kp N5  &kp N6  &kp MINUS &kp K_SCROLL_DOWN
-   &kp C_BRI_DN  &trans  &trans  &trans &trans &trans &trans &trans         &trans &trans &kp DOT   &kp N1  &kp N2  &kp N3  &kp N0    &trans	
+   &kp C_BRI_DN  &trans  &trans  &trans &trans &trans &trans &trans         &trans &trans &kp SE_EQUAL &kp N1  &kp N2  &kp N3  &kp N0    &trans	
 	                                  &trans &trans &mo CONFIG &trans       &trans &trans &trans &trans &trans &trans
 			>;
 
