@@ -27,14 +27,14 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  F  |  P   |  B   |                                  |  J   |  L  |  U  |  Y  |  Å  |   Ä  |
 // | SHIFT|  A  |  R  |  S  |  T   |  G   |                                  |  M   |  N  |  E  |  I  |  O  |   Ö  |
-// | CRTL |  Z  |  X  |  C  |  D   |  V   | ESC  |     |     | L GUI | RET   |  K   |  H  |  ,  |  .  |  -  | TERM |
-//                    |     |L ALT |LOWER | BSPC | DEL |     | SHIFT |SPACE |RAISE |    |    |
+// | CRTL |  Z  |  X  |  C  |  D   |  V   | ESC  |     |     | L GUI | RET   |  K   |  H  |  ,  |  .  |  -  |      |
+//                    |MUTE |L ALT |LOWER | BSPC | DEL |     | SHIFT |SPACE |RAISE |    |TERM|
 
 			bindings = <
 	&kp TAB   &kp Q &kp W &kp F &kp P &kp B                                                &kp J &kp L  &kp U  &kp Y   &kp SE_AO &kp SE_AE
 	&kp LSHFT &kp A &kp R &kp S &kp T &kp G                                                &kp M &kp N  &kp E  &kp I   &kp O &kp SE_OE
-	&kp LCTRL &kp Z &kp X &kp C &kp D &kp V &kp ESC &none             &kp LGUI &kp RET  &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp GRAVE
-	                 &none &kp LALT &mo LOWER &kp BSPC &kp DEL        &sk LSHFT  &kp SPACE &mo RAISE &none &none
+	&kp LCTRL &kp Z &kp X &kp C &kp D &kp V &kp ESC &none             &kp LGUI &kp RET  &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &none
+	                 &kp C_MUTE &kp LALT &mo LOWER &kp BSPC &kp DEL        &sk LSHFT  &kp SPACE &mo RAISE &none &kp GRAVE
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -45,29 +45,29 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   Å  |
 // | SHIFT |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   Ö   |   Ä  |
-// | CTRL  |  Z  |  X  |  C   |  V   |  B   | ESC  |     |            | L GUI |  RET   |  N   |  M    |  ,    |  .   |   -   | TERM |
-//                     | GUI  | DEL  |LOWER | BSPC | DEL |            | SHIFT | SPACE |RAISE |    |    |
+// | CTRL  |  Z  |  X  |  C   |  V   |  B   | ESC  |     |            |       |  RET   |  N   |  M    |  ,    |  .   |   -   | TERM |
+//                     | MUTE  | DEL  |LOWER | BSPC | DEL |            | SHIFT | SPACE |RAISE |    | L GUI |
 
 			bindings = <
 	&kp TAB   &kp Q &kp W  &kp E  &kp R   &kp T                                                 &kp Y &kp U  &kp I     &kp O   &kp P     &kp SE_AO
 	&sk LSHFT &kp A &kp S  &kp D  &kp F   &kp G                                                 &kp H &kp J  &kp K     &kp L   &kp SE_OE &kp SE_AE
-	&kp LCTRL &kp Z &kp X  &kp C  &kp V   &kp B  &kp ESC  &none                &kp LGUI &kp RET &kp N &kp M  &kp COMMA &kp DOT &kp FSLH  &kp GRAVE
-	                       &kp LGUI &kp LGUI &mo LOWER &kp BSPC &kp DEL        &kp LSHFT  &kp SPACE  &mo RAISE &none &none
+	&kp LCTRL &kp Z &kp X  &kp C  &kp V   &kp B  &kp ESC  &none                &none &kp RET &kp N &kp M  &kp COMMA &kp DOT &kp FSLH  &kp GRAVE
+	                       &kp C_MUTE &kp LGUI &mo LOWER &kp BSPC &kp DEL        &kp LSHFT  &kp SPACE  &mo RAISE &none &kp LGUI
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 		};
 		Lower {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |next |CAPS |PG_UP|  UP  |PG_DN |     |                           |  \  |  /  | (  |  )  | ?  |vol up|
+// |next |CAPS |     |  UP  |      |     |                           |  \  |  /  | (  |  )  | ?  |vol up|
 // |play |HOME |LEFT | DOWN |RIGHT | END |                           |  |  |  <  | [  |  ]  | >  |vol down|
 // |prev |     |     |      |      |     |    |    |         |   |   |  =  |  *  | {  |  }  | &  |mute|
 //                          |      |     |    |    |         |   |   |CONFIG|     |    |
 
 			bindings = <
-	&kp C_NEXT  &kp CAPS &kp PG_UP &kp UP   &kp PG_DN &trans                                   &kp SE_BLSH  &kp SE_FLSH &kp SE_LPAR &kp SE_RPAR &kp SE_QMARK &kp C_VOL_UP
-	&kp C_PP    &kp HOME &kp LEFT  &kp DOWN &kp RIGHT &kp END                                  &kp SE_PIPE  &kp SE_LT   &kp SE_LBKT &kp SE_RBKT &kp SE_GT    &kp C_VOL_DN              
-	&kp C_PREV  &trans   &trans    &trans   &trans    &trans &trans &trans     &trans  &trans  &kp SE_EQUAL &kp SE_STAR &kp SE_LBRC &kp SE_RBRC &kp SE_AMPS  &kp C_MUTE
+	&kp C_NEXT  &kp CAPS &none &kp UP   &none &trans                                   &kp SE_BLSH  &kp SE_FLSH &kp SE_LPAR &kp SE_RPAR &kp SE_QMARK &none
+	&kp C_PP    &kp HOME &kp LEFT  &kp DOWN &kp RIGHT &kp END                                  &kp SE_PIPE  &kp SE_LT   &kp SE_LBKT &kp SE_RBKT &kp SE_GT    &none
+	&kp C_PREV  &trans   &trans    &trans   &trans    &trans &trans &trans     &trans  &trans  &kp SE_EQUAL &kp SE_STAR &kp SE_LBRC &kp SE_RBRC &kp SE_AMPS  &none
 	                                &trans   &trans    &trans &trans &trans     &trans  &trans  &mo CONFIG   &trans     &trans
 			>;
 
