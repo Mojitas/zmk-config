@@ -25,15 +25,15 @@
 
 			Colemak {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  F  |  P   |  B   |                                  |  J   |  L  |  U  |  Y  |  Å  |   Ä  |
-// | SHIFT|  A  |  R  |  S  |  T   |  G   |                                  |  M   |  N  |  E  |  I  |  O  |   Ö  |
-// | CRTL |  Z  |  X  |  C  |  D   |  V   | ESC  |     |     | L GUI | RET   |  K   |  H  |  ,  |  .  |  -  |      |
-//                    |MUTE |L ALT |LOWER | BSPC | DEL |     | SHIFT |SPACE |RAISE |    |TERM|
+// |  TAB |  Q  |  W  |  F  |  P   |  B   |                                  |  J   |  L  |  U  |  Y  |  Å  |   Ö  |
+// | SHIFT|  A  |  R  |  S  |  T   |  G   |                                  |  M   |  N  |  E  |  I  |  O  |   Ä  |
+// | CRTL |  Z  |  X  |  C  |  D   |  V   | ESC  |     |     |       |  RET  |  K   |  H  |  ,  |  .  |  -  |L GUI |
+//                    |MUTE |L ALT |LOWER | BSPC | DEL |     | SHIFT | SPACE |RAISE |     |TERM |
 
 			bindings = <
-	&kp TAB   &kp Q &kp W &kp F &kp P &kp B                                                &kp J &kp L  &kp U  &kp Y   &kp SE_AO &kp SE_AE
-	&kp LSHFT &kp A &kp R &kp S &kp T &kp G                                                &kp M &kp N  &kp E  &kp I   &kp O &kp SE_OE
-	&kp LCTRL &kp Z &kp X &kp C &kp D &kp V &kp ESC &none             &kp LGUI &kp RET  &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &none
+	&kp TAB   &kp Q &kp W &kp F &kp P &kp B                                                &kp J &kp L  &kp U  &kp Y   &kp SE_AO &kp SE_OE
+	&kp LSHFT &kp A &kp R &kp S &kp T &kp G                                                &kp M &kp N  &kp E  &kp I   &kp O &kp SE_AE
+	&kp LCTRL &kp Z &kp X &kp C &kp D &kp V &kp ESC &none             &none &kp RET  &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp LGUI
 	                 &kp C_MUTE &kp LALT &mo LOWER &kp BSPC &kp DEL        &sk LSHFT  &kp SPACE &mo RAISE &none &kp GRAVE
 			>;
 
